@@ -1,0 +1,50 @@
+Array = [3, 11, 5, 8, 26, 1, 70, 19, 34, 46]
+option = ""
+
+while option != "7":
+    print("""\n     ^^^^^^^^^^^^^^^^^^^Menu^^^^^^^^^^^^^^^^^^^
+          0 --> Show array
+          1 --> Add an elemet
+          2 --> Insert an element
+          3 --> Modify an element
+          4 --> Delete an element
+          5 --> Arrange in ascending order
+          6 --> Arrange in descending order
+          7 --> Exit""")
+    option = input("What do you want to do? (0-7): ")
+
+    if option == "0":
+        print("Array: ", Array)
+        input("\nClick 'Enter' to continue.")
+    elif option == "1":
+        Array.append(int(input("Add an element: ")))
+        print("The element has been added.")
+        print("This is the new array: ", Array)
+    elif option == "2":
+        ins = int((input("Insert an element: ")))
+        index = int((input("Index of the element you want to insert: ")))
+        Array.insert(index, ins)
+        print("The element has been inserted.")
+        print("This is the new array: ", Array)
+    elif option == "3":
+        print("Array: ", Array)
+        Array[int(input("Index of the element you want to replace: "))] = int(input("Enter the new element: "))
+        print("The array has been modified.")
+        print("This is the new array: ", Array)
+    elif option == "4":
+        Array.remove(int(input("Delete an element: ")))
+        print("The element has been deleted.")
+        print("This is the new array: ", Array)
+    elif option == "5":
+        Array.sort()
+        print("The element has been sorted to ascending order.")
+        print("This is the new array: ", Array)
+    elif option == "6":
+        Array.reverse()
+        print("The element has been sorted to descending order.")
+        print("This is the new array: ", Array)
+    elif option == "7":
+        print("\n^^^^^^^^^^^^^^^Thank you for using the program!^^^^^^^^^^^^^^^")
+        break
+    else:
+        break
